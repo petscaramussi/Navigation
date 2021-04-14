@@ -10,17 +10,24 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Rela Principal"),
+        title: Text("Tela Secundaria"),
         backgroundColor: Colors.blue,
       ),
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
-            Text("Segunda Tela")
+            Text("Segunda tela!!!!"),
+            RaisedButton(
+              child: Text("Ir para a tela principal"),
+              padding: EdgeInsets.all(15),
+              onPressed: (){
+                Navigator.pushNamed(context, "/");
+              },
+            )
           ],
         ),
       ),
-      );
+    );
   }
 }
